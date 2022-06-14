@@ -105,13 +105,18 @@
   border: 0;
   border-radius: 8px;
   background-color: var(--green-500);
-  
+
   cursor: pointer;
 
   transition: background-color 0.2s;
 }
 
-.commentForm button[type=submit]:hover {
+.commentForm button:disabled {
+  cursor: not-allowed;
+  filter: brightness(70%);
+}
+
+.commentForm button[type=submit]:not(:disabled):hover {
   background-color: var(--green-300);
 }
 
